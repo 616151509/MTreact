@@ -1,0 +1,54 @@
+#order{
+    display: flex;
+    .nav{
+        height: 100%;
+        width: 80px;
+        background: palegoldenrod;
+        .nav-item{
+            padding: 15px 10px;
+            line-height: 20px;
+            font-size: 14px;
+            color: #666;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+            &.active{
+                background: #fff;
+            }
+        }
+    }
+    .menu{
+        height: 100%;
+        flex: 1;
+        background: paleturquoise;
+        .menu-list-title{
+            padding: 10px;
+        }
+        .menu-list{
+            .menu-item{
+                padding: 5px;
+                position: relative;
+                border-bottom: 1px solid #ddd;
+                >.item-img{
+                    width: 70px;
+                    height: 70px;
+                    background-size: 150%;
+                    background-position: center;
+                    position: absolute;
+                    top: 5px;
+                    left: 5px;
+                }
+                >.item-content{
+                    width: 100%;
+                    padding-left: 80px;
+                    box-sizing: border-box;
+                    p:first-of-type{
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        width: 100px;
+                    }
+                }
+            }
+        }
+    }
+}

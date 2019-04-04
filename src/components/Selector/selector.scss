@@ -1,0 +1,159 @@
+.panel {
+}
+.cover {
+  position: absolute;
+  width: 100%;
+  top: 44px;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
+}
+.panel .panel-content {
+  position: absolute;
+  left: 0;
+  top: 44px;
+  width: 100%;
+  z-index: 10;
+}
+.seller-selector {
+  width: 100%;
+  height: 45px;
+  display: flex;
+  box-shadow: 0 0 2px #ddd;
+  background: #fff;
+  &::before {
+    border-left: none;
+    border-right: none;
+  }
+  .selector-item {
+    flex: 1;
+    text-align: center;
+    line-height: 45px;
+    font-size: 14px;
+    &:last-of-type {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 1px;
+        height: 50%;
+        background: #ddd;
+        transform: scaleX(0.5) translateY(-50%);
+      }
+    }
+  }
+}
+
+.list1 {
+  background: #fff;
+  .item {
+    line-height: 30px;
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+}
+
+.list2 {
+  background: #fff;
+  width: 100%;
+  height: 300px;
+  position: relative;
+  .mult-wrap {
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: 40px;
+    position: absolute;
+    overflow: auto;
+    .mult {
+      padding: 8px;
+      .mult-title {
+        font-size: 12px;
+        color: #999;
+        line-height: 16px;
+        padding-left: 8px;
+      }
+      .mult-list {
+        overflow: hidden;
+        .mult-item1 {
+          width: 33.33%;
+          &.active > div {
+            color: #ffb000;
+            border-color: #ffb000;
+            font-weight: 600;
+            background-color: #fffbf1;
+          }
+          & > div {
+            display: flex;
+            height: 28px;
+            border: 1px solid #ccc;
+            img {
+              width: 28px;
+            }
+            p {
+              flex: 1;
+              font-size: 12px;
+              text-align: center;
+              line-height: 28px;
+            }
+          }
+        }
+        .mult-item2 {
+          width: 50%;
+          &.active > div {
+            color: #ffb000;
+            font-weight: bold;
+          }
+          & > div {
+            height: 16px;
+            padding: 2px 0;
+            img {
+              width: 15px;
+              float: left;
+            }
+            p {
+              float: left;
+              margin-left: 5px;
+              font-size: 12px;
+              text-align: left;
+            }
+          }
+        }
+        .mult-item1,
+        .mult-item2 {
+          float: left;
+          padding: 8px;
+          box-sizing: border-box;
+        }
+      }
+    }
+  }
+
+  .btns {
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    .btn {
+      flex: 1;
+      text-align: center;
+      line-height: 40px;
+      font-size: 14px;
+    }
+    .btn:last-of-type {
+      background: #ffd161;
+      span {
+        margin-left: 5px;
+        padding: 0 5px;
+        background: #333;
+        color: #fff;
+        border-radius: 50%;
+      }
+    }
+  }
+}
